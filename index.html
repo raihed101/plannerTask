@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>TodoApp</title>
+  </head>
+  <body>
+<!-- Name -> Input type text
+Description -> Input type text
+AssignedTo -> Input type text
+DueDate -> Input type text [dd/mm/yyyy]
+Status -> Select [TODO, IN PROGRESS, REVIEW, DONE] -->
+
+
+    <div class="form">
+        <div class="container text-center" id="mainSec">
+          <div class="row">
+            <form name="form" id="form">
+              <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input type="text" id="nameInput" placeholder="Your name ...">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>Error</small>
+              </div>
+                <div class="form-group">
+                <label for="descriptionInput">Description</label>
+                <input type="text" id="descriptionInput"  placeholder="Eg. Report to ...">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>Error</small>
+              </div>
+              <div class="form-group">
+                <label for="assignInput">AssignTo</label>
+                <input type="text" id="assignInput"  placeholder="Eg. David Smith ...">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>Error</small>
+              </div>
+              <!-- <div class="form-group"> -->
+                  <div class="form-group">
+                    <label for="dueDateInput">Due</label>
+                    <input type="text" id="dueDateInput" placeholder="MM/DD/YYYY" type="text"/>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <small>Error</small>
+                  </div>
+              <div class="form-group">
+                <label for="statusInput"> Status</label>
+                <select id="statusInput" class="browser-default custom-select">
+                  <option selected>where are we at?</option>
+                  <option value="todo">TODO</option>
+                  <option value="inProgress">IN PROGRESS</option>
+                  <option value="review">REVIEW</option>
+                  <option value="done">DONE</option>
+                </select>
+              </div>
+            </form>
+              <button class="btn btn-primary btn0" id="addButton" name="submit" type="button">Add Task</button>
+          </div>
+          <!-- list of items -->
+
+          <hr>
+
+            <div class="col-md-6 center">
+              <div class="list-group center" id="cardsList">
+                <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Assigned To:</h5>
+                    <small>Due Date:</small>
+                  </div>
+                  <small>Status:</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Assigned To:</h5>
+                    <small>Due Date:</small>
+                  </div>
+                  <small>Status:</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Assigned To:</h5>
+                    <small>Due Date:</small>
+                  </div>
+                  <small>Status:</small>
+                </a> -->
+              </div>
+          </div>
+          <br>
+          <hr>
+          <!-- each cards will have own coloumn -->
+          <div class="container">
+            <div class="row" id="cardsArea">
+              <!-- <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                    Featured
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Name:</li>
+                    <li class="list-group-item">Assigned To:</li>
+                    <li class="list-group-item">Due Date:</li>
+                    <li class="list-group-item">Description:</li>
+                    <li class="list-group-item">Status:</li>
+
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                    Featured
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Name:</li>
+                    <li class="list-group-item">Assigned To:</li>
+                    <li class="list-group-item">Due Date:</li>
+                    <li class="list-group-item">Description:</li>
+                    <li class="list-group-item">Status:</li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                    Featured
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Name:</li>
+                    <li class="list-group-item">Assigned To:</li>
+                    <li class="list-group-item">Due Date:</li>
+                    <li class="list-group-item">Description:</li>
+                    <li class="list-group-item">Status:</li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                    Featured
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Name:</li>
+                    <li class="list-group-item">Assigned To:</li>
+                    <li class="list-group-item">Due Date:</li>
+                    <li class="list-group-item">Description:</li>
+                    <li class="list-group-item">Status:</li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                    Featured
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Name:</li>
+                    <li class="list-group-item">Assigned To:</li>
+                    <li class="list-group-item">Due Date:</li>
+                    <li class="list-group-item">Description:</li>
+                    <li class="list-group-item">Status:</li>
+
+                  </ul>
+                </div>
+              </div>
+  
+            </div>
+          </div> -->
+        </div>
+    </div>
+
+    <!-- cards -->
+     <!-- <div class="form-group">
+  <div class="container">
+    <div class="row">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>        </a>
+      </div>
+
+    </div>
+  </div>
+
+</div> -->
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+
+   
+  </body>
+</html>

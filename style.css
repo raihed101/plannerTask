@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+body {
+  background-image: linear-gradient(135deg, #adadad 0%, #c3cfe2 100%);
+  background-repeat: no-repeat;
+  font-family: "Montserrat";
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+select {
+  padding: 10px;
+  border: none;
+}
+
+#form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  padding: 40px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-group i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-group small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-group button {
+  background-color: #c3cfe2;
+  border: none;
+  color: #000;
+  display: block;
+  align-items: center;
+  font-size: 10px;
+  padding: 20px;
+}
+
+.btn0 {
+  color: #000;
+  background-color: #c3cfe2;
+  box-shadow: none;
+  outline: none;
+  border: 0;
+}
+
+.btn0:hover {
+  background-color: rgb(190, 190, 190);
+}
+
+/* /cards */
+
+#cardsList {
+}
+
+/* #cardsArea a{
+} */
+
+/* validation correct */
+
+.form-group.success input {
+  border-color: #2ecc71;
+}
+
+.form-group.error input {
+  border-color: #e74c3c;
+}
+
+.form-group i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  visibility: hidden;
+}
+
+.form-group.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.form-group.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form-group small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-group.error small {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+@media only screen and (min-width: 500px) {
+  .btn0 {
+    margin-bottom: 10px;
+  }
+}
