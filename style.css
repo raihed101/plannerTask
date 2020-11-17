@@ -17,7 +17,6 @@ select {
 
 #form {
   display: flex;
-  justify-content: space-between;
 }
 
 .form {
@@ -67,10 +66,9 @@ select {
   display: block;
   align-items: center;
   font-size: 10px;
-  padding: 20px;
 }
 
-.btn0 {
+#addButton {
   color: #000;
   background-color: #c3cfe2;
   box-shadow: none;
@@ -82,9 +80,16 @@ select {
   background-color: rgb(190, 190, 190);
 }
 
+button {
+  background-color: #c3cfe2;
+  border: 0;
+  border-radius: 10px;
+}
+
 /* /cards */
 
-#cardsList {
+.card-header {
+  background-color: #c3cfe2;
 }
 
 /* #cardsArea a{
@@ -132,5 +137,11 @@ select {
 @media only screen and (min-width: 500px) {
   .btn0 {
     margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #form {
+    display: inline;
   }
 }
